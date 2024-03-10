@@ -1,3 +1,3 @@
 Для запуска проекта достаточно сделать:
-1. git clone
-2. <kbm>yarn && yarn</kbm> dev в консоли
+1. <kbd>git clone</kbd>
+2. <kbd>yarn && yarn</kbd> dev в консоли
