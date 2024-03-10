@@ -1,0 +1,158 @@
+@use "fonts";
+@use "reset";
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  padding: 50px 0 0 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+.main-find-user {
+
+  &__wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 #0000001A;
+
+    height: 575px;
+
+    display: grid;
+    grid-template-columns: 291px 1fr;
+
+    margin-bottom: 48px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+  }
+}
+
+.sidebar {
+  padding: 24px 20px;
+  background: #fdfdfd;
+  border-right: 1px solid #DEDEDD;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  &__found-persons-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: scroll;
+    height: 400px;
+
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      height: auto;
+    }
+
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__result-not-found {
+    margin-top: -12px;
+    color: #76787D;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__wrapper {
+
+  }
+}
+
+.user-information {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  padding: 30px 20px;
+
+  &__data {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 60px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &__image {
+      img {
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &__name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      &__title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      &__about {
+        line-height: 18px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #76787D;
+      }
+      &__email,&__phone {
+        font-weight: 600;
+        font-size: 14px;
+
+        span {
+          font-weight: 400;
+        }
+      }
+
+    }
+  }
+
+  &__tip {
+    font-size: 14px;
+    font-weight: 400;
+    color: #76787D;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: 768px) {
+      position: static;
+    }
+  }
+}
